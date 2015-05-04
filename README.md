@@ -1,4 +1,6 @@
-# Josh's dotfiles
+# Frank's dotfiles
+
+Shamelessly copied from Josh Adams (@knewter).
 
 To install these suckers, just `./setup.sh`
 
