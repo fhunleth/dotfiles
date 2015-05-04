@@ -122,9 +122,9 @@ let mapleader = ","
 set encoding=utf-8
 
 " Whitespace stuff
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Searching
@@ -188,7 +188,7 @@ augroup END
 
 augroup erlang
   au!
-  au BufNewFile,BufRead *.erl setlocal tabstop=4
+  au BufNewFile,BufRead *.erl setlocal tabstop=8
   au BufNewFile,BufRead *.erl setlocal shiftwidth=4
   au BufNewFile,BufRead *.erl setlocal softtabstop=4
 augroup END
@@ -255,10 +255,10 @@ map <leader>T :VroomRunNearestTest<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NO ARROW KEYS COME ON
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+"map <Left> :echo "no!"<cr>
+"map <Right> :echo "no!"<cr>
+"map <Up> :echo "no!"<cr>
+"map <Down> :echo "no!"<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIR OF CURRENT FILE
@@ -298,3 +298,16 @@ map <C-C> :q<CR>
 " ctrlp settings
 """""""""""""""""""
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+""""""""""""""""""""""""""""""""""
+" Trim trailing whitespace on save
+""""""""""""""""""""""""""""""""""
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
