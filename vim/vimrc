@@ -10,9 +10,8 @@ set nowrap
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required!
+Bundle 'VundleVim/Vundle.vim'
 
 "Bundle 'altercation/vim-colors-solarized'
 "Bundle 'alunny/pegjs-vim'
