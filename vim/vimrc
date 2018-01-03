@@ -1,5 +1,5 @@
 set nocompatible
-filetype plugin indent on
+filetype off
 syntax on
 
 set nowrap
@@ -14,32 +14,33 @@ call vundle#begin()
 " required!
 Bundle 'gmarik/vundle'
 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'alunny/pegjs-vim'
+"Bundle 'altercation/vim-colors-solarized'
+"Bundle 'alunny/pegjs-vim'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'chriskempson/base16-vim'
-Bundle 'chriskempson/tomorrow-theme'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'dandorman/vim-colors'
+Bundle 'vim-airline/vim-airline'
+"Bundle 'chriskempson/base16-vim'
+"Bundle 'chriskempson/tomorrow-theme'
+"Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'dandorman/vim-colors'
 Bundle 'elixir-lang/vim-elixir'
-Bundle 'ervandew/supertab'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'groenewege/vim-less'
-Bundle 'int3/vim-extradite'
+"Bundle 'ervandew/supertab'
+"Bundle 'flazz/vim-colorschemes'
+"Bundle 'groenewege/vim-less'
+"Bundle 'int3/vim-extradite'
 Bundle 'kien/ctrlp.vim'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'sudar/vim-arduino-syntax'
+"Bundle 'leafgarland/typescript-vim'
+"Bundle 'mileszs/ack.vim'
+"Bundle 'slim-template/vim-slim'
+"Bundle 'sudar/vim-arduino-syntax'
 Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-classpath'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/SyntaxRange'
-Bundle 'walm/jshint.vim'
-Bundle 'wavded/vim-stylus'
+"Bundle 'tpope/vim-bundler'
+"Bundle 'tpope/vim-classpath'
+"Bundle 'tpope/vim-fireplace'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-surround'
+"Bundle 'vim-scripts/SyntaxRange'
+"Bundle 'walm/jshint.vim'
+"Bundle 'wavded/vim-stylus'
 Bundle 'jlanzarotta/bufexplorer'
 
 let g:airline_theme='luna'
@@ -49,12 +50,16 @@ let g:markdown_fenced_languages=['javascript', 'elixir', 'sh']
 Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
 
-let g:vroom_map_keys=0
-let g:vroom_use_colors=1
-Bundle 'skalnik/vim-vroom'
+"let g:vroom_map_keys=0
+"let g:vroom_use_colors=1
+"Bundle 'skalnik/vim-vroom'
 
-let g:molokai_original=1
-let g:rehash256=1
+"let g:molokai_original=1
+"let g:rehash256=1
+
+" All plugins must be added before here
+call vundle#end()
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""
 " BACKUP / TMP FILES
@@ -163,10 +168,6 @@ set cuc cul
 " Show linenumbers
 set number
 set ruler
-
-" Use Powerline
-"let g:Powerline_symbols="fancy"
-"python from powerline.bindings.vim import source_plugin; source_plugin()
 
 " Font
 "set guifont="Terminus\ 9"
