@@ -1,5 +1,9 @@
 {
     "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "'Meslo LG S for Powerline'",
+    "editor.fontSize": 11,
+
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 80
