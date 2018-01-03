@@ -10,18 +10,19 @@ if false; then
     # to be one of the Powerline fonts (e.g. Mesio LG S for Powerline)
 
     brew install python
-    pip install --user powerline-status
+    pip2 install --user powerline-status
     git clone https://github.com/powerline/fonts.git
     cd fonts/
     ./install.sh
     cd ..
     rm -fr fonts
 
-    # Install zsh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     mkdir -p ~/.local/bin
     git clone https://github.com/powerline/powerline.git
     cp powerline/scripts/* ~/.local/bin
+
+    # Install zsh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 # vim
