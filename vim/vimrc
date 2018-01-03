@@ -25,9 +25,7 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'ervandew/supertab'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'groenewege/vim-less'
-Bundle 'guns/vim-clojure-static'
 Bundle 'int3/vim-extradite'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kikijump/tslime.vim'
 Bundle 'leafgarland/typescript-vim'
@@ -39,18 +37,16 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/SyntaxRange'
 Bundle 'walm/jshint.vim'
 Bundle 'wavded/vim-stylus'
+Bundle 'jlanzarotta/bufexplorer'
 
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 
-let g:markdown_fenced_languages=['ruby', 'javascript', 'elixir', 'clojure', 'sh']
+let g:markdown_fenced_languages=['javascript', 'elixir', 'sh']
 Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
 

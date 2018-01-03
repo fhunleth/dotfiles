@@ -1,0 +1,11 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80
+    },
+    "[elixir]": {
+        "editor.tabSize": 2
+    },
+    "editor.minimap.enabled": false
+}
