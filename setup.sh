@@ -2,6 +2,28 @@
 
 UNAME=$(uname)
 
+if false; then
+    # Undebugged stuff from OSX setup
+
+    # Install Powerline and fonts
+    # You still need to change the default font on your terminal
+    # to be one of the Powerline fonts (e.g. Mesio LG S for Powerline)
+
+    brew install python
+    pip install --user powerline-status
+    git clone https://github.com/powerline/fonts.git
+    cd fonts/
+    ./install.sh
+    cd ..
+    rm -fr fonts
+
+    # Install zsh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    mkdir -p ~/.local/bin
+    git clone https://github.com/powerline/powerline.git
+    cp powerline/scripts/* ~/.local/bin
+fi
+
 # vim
 echo "Setting up .vimrc..."
 ln -sf `pwd`/vim/vimrc ~/.vimrc
@@ -27,7 +49,7 @@ vim +PluginInstall +qall
 # map caps to esc
 echo "Mapping caps lock to escape..."
 if [ "$UNAME" = "Darwin" ]; then
-    echo "Fill in"
+    echo "To map caps lock to escape, go to Preferences->Keyboard->Modifiers"
 else
     ln -sf `pwd`/xmodmap/xmodmap-esc ~/.xmodmap-esc
 fi
